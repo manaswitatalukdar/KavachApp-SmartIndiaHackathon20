@@ -1,26 +1,40 @@
-import React, { Component } from "react";
+import React from "react";
 import "../App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SearchProfile from "./SearchProfile";
 
-class Profiles extends Component {
-  state = {};
-  render() {
-    return (
-      <React.Fragment>
-        <div id="wrapper2">
-          <div id="welcome" className="container">
-            <div className="title">
-              <h2>Profiles</h2>
-            </div>
+function Profiles() {
+  return (
+    <React.Fragment>
+      <div id="wrapper2" className="profileNavBar">
+        <div className="container">
+          <div>
+            <h1>Profiles</h1>
           </div>
         </div>
-        <div id="wrapper3">
-          <div id="portfolio" className="container"></div>
+      </div>
+      <SearchProfile />
+      <div id="footer" className="container">
+        <div className="title">
+          <h2>Get in touch</h2>{" "}
         </div>
-        <div id="footer" className="container"></div>
-      </React.Fragment>
-    );
-  }
+        <ul className="contact">
+          <li>
+            <a className="icon icon-phone"></a>
+          </li>
+          <li>
+            <a className="icon icon-twitter"></a>
+          </li>
+          <li>
+            <a className="icon icon-youtube-sign"></a>
+          </li>
+          <li>
+            <a className="icon icon-tumblr"></a>
+          </li>
+        </ul>
+      </div>
+    </React.Fragment>
+  );
 }
 
 export default Profiles;
