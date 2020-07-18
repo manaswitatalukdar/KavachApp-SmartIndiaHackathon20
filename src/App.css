@@ -34,12 +34,13 @@ p {
   z-index: 2;
 }
 
+.icon-angle-down {
+  float: right;
+}
+
 /*********************************************************************************/
 /* Form Style                                                                    */
 /*********************************************************************************/
-
-form {
-}
 
 form label {
   display: block;
@@ -78,11 +79,6 @@ form textarea {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1em;
   outline: none;
-}
-
-form input.text:hover,
-form select:hover,
-form textarea:hover {
 }
 
 form input.text:focus,
@@ -156,13 +152,6 @@ form ::-moz-focus-inner {
 }
 
 /*********************************************************************************/
-/* List Styles                                                                   */
-/*********************************************************************************/
-
-ul.style1 {
-}
-
-/*********************************************************************************/
 /* Social Icon Styles                                                            */
 /*********************************************************************************/
 
@@ -220,6 +209,7 @@ ul.contact li a {
 }
 
 .button-small {
+  font-size: 16px;
 }
 
 /*********************************************************************************/
@@ -253,9 +243,6 @@ ul.contact li a {
   padding: 3em 0em;
 }
 
-#header {
-}
-
 /*********************************************************************************/
 /* Logo                                                                          */
 /*********************************************************************************/
@@ -277,9 +264,6 @@ ul.contact li a {
 /*********************************************************************************/
 /* Menu                                                                          */
 /*********************************************************************************/
-
-#menu {
-}
 
 #menu ul {
   text-align: center;
@@ -526,28 +510,36 @@ ul.contact li a {
 /* Login                                                             */
 /*********************************************************************************/
 
-.login {
-  margin-left: 1100px;
-  padding: 10px 20px;
-  background: #6c2a6a;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-  font-family: "Source Sans Pro", sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
 button:focus {
   outline: none;
 }
 
 .login-wrapper1 {
-  background-color: rgba(240, 234, 236, 1);
+  background-color: rgb(156, 119, 131);
+  width: 500px;
+  height: 500px;
+  margin-left: 320px;
+  margin-bottom: 100px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(156, 119, 131, 0.2),
+    0 6px 20px 0 rgba(156, 119, 131, 0.19);
+  animation-name: form;
+  animation-duration: 4s;
 }
 
 .login-wrapper2 {
-  margin: 50px;
+  padding: 50px;
+  text-align: center;
+  align-items: center;
+}
+
+@keyframes form {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*********************************************************************************/
@@ -560,12 +552,15 @@ button:focus {
 }
 
 .root {
-  background: rgb(219, 211, 214);
+  max-height: 200px;
+  background: rgb(255, 255, 255);
   display: flex;
+  font-family: "Times New Roman", Times, serif;
 }
 .contentProfile {
   text-align: left;
-  margin-top: 60px;
+  margin-top: 20px;
+  margin-left: 30px;
 }
 
 input {
@@ -573,6 +568,7 @@ input {
   height: 30px;
   padding: 10px;
   font-size: 20px;
+  margin-bottom: 50px;
   border: none;
   border-radius: 5px;
 }

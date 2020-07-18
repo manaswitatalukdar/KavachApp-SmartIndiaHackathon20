@@ -49,40 +49,35 @@ class SearchProfile extends Component {
               onChange={this.updateSearch.bind(this)}
             />
           </div>
-        </div>
 
-        <div id="footer" className="container">
           {filteredCops.map((cop) => (
-            <Card key={cop.id} style={{ margin: `20px` }}>
+            <Card key={cop.id} style={{ margin: `20px 80px 20px 80px` }}>
               <div className="root">
-                <img src={image1} style={{ margin: `30px` }} />
+                <img src={image1} style={{ width: `150px` }} />
                 <div>
                   <CardContent className="contentProfile">
                     <div className="column1">
-                      <Typography component="h4" variant="h4">
+                      <h3>
                         <strong>Name: </strong> {cop.login}
-                      </Typography>
-                      <Typography component="h5" variant="h5">
+                      </h3>
+                      <h4>
                         <strong>Station: </strong> Xyz
-                      </Typography>
-                      <Typography component="h5" variant="h5">
+                      </h4>
+                      <h4>
                         <strong>Phone: </strong> {cop.id}
-                      </Typography>
+                      </h4>
                     </div>
                     <div className="column2"></div>
                     <div className="column4">
-                      <Typography component="h5" variant="h5">
-                        <strong>Cases: </strong>
-                      </Typography>
-                      <Typography>
+                      <h3>
                         <strong>Active Cases: </strong> 8
-                      </Typography>
-                      <Typography>
+                      </h3>
+                      <h4>
                         <strong>Rejected Cases: </strong> 18
-                      </Typography>
-                      <Typography>
+                      </h4>
+                      <h4>
                         <strong>Completed Cases: </strong> 9
-                      </Typography>
+                      </h4>
                     </div>
                   </CardContent>
                 </div>

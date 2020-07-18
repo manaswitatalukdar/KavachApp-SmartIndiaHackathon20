@@ -31,7 +31,7 @@ function App() {
       <div className="app">
         <Navigation />
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/home" exact component={Home} />
           <Route path="/profiles" component={Profiles} />
           <Route path="/reports" component={Reports} />
           <Route path="/notifications" component={Notifications} />

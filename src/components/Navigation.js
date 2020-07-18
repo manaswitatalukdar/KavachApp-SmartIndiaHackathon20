@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink, Link } from "react-router-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Login from "./Login";
 
 const Li = styled.div`
   display: inline-block;
@@ -21,10 +20,6 @@ function Navigation() {
   return (
     <div id="header-wrapper">
       <div id="header" className="container">
-        <Link className="login" to="/login">
-          Login
-        </Link>
-        <Route path="/login" component={Login} />
         <div id="logo">
           <div className="logo"></div>{" "}
         </div>
@@ -34,7 +29,7 @@ function Navigation() {
               exact
               activeClassName="navbar__link--active"
               className="navbar__link"
-              to="/"
+              to="/home"
             >
               <Li>Home</Li>
             </NavLink>

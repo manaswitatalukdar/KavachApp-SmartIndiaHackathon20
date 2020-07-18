@@ -46,23 +46,20 @@ class SearchReports extends Component {
               onChange={this.updateSearch.bind(this)}
             />
           </div>
-        </div>
-
-        <div id="footer" className="container">
           {filteredReports.map((report) => (
-            <Card key={report.id} style={{ margin: `20px` }}>
+            <Card key={report.id} style={{ margin: `20px 80px 20px 80px` }}>
               <div className="root">
                 <CardContent className="contentReports">
-                  <Typography component="h6" variant="h6">
+                  <h4>
                     <strong>title: </strong> {report.title}
-                  </Typography>
-                  <Typography component="h6" variant="h6">
+                  </h4>
+                  <h4>
                     <strong>Reported on: </strong> {report.userId}/
                     {report.id % 10}/2019
-                  </Typography>
-                  <Typography component="h6" variant="h6">
+                  </h4>
+                  <h4>
                     <strong>Active: </strong> false
-                  </Typography>
+                  </h4>
                 </CardContent>
               </div>
             </Card>
